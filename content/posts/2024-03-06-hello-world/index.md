@@ -6,7 +6,7 @@ summary = 'The almost obligatory opening :slight_smile: '
 tags = ['hello']
 +++
 
-![water droplets on glass during daytime](water-droplets-on-glass-during-daytime-_x6oTZbNsh0.jpg "Photo by [Jr Korpa](https://unsplash.com/@jrkorpa) on [Unsplash](https://unsplash.com/)")
+![water droplets on glass during daytime](water-droplets-on-glass-during-daytime.jpg "Photo by [Jr Korpa](https://unsplash.com/@jrkorpa) on [Unsplash](https://unsplash.com/)")
 
 ## Introduction
 
