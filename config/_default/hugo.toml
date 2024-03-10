@@ -6,7 +6,6 @@ baseURL = "https://sweeneydavidj.github.io/"
 theme = "congo"
 languageCode = "en"
 defaultContentLanguage = "en"
-publishDir = "docs"
 
 enableRobotsTXT = true
 paginate = 10
