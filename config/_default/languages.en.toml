@@ -3,12 +3,12 @@ languageName = "English"
 languageDirection = "ltr"
 weight = 1
 
-title = "sweeneydavidj"
+title = "BEAMjourney"
 
 [params]
   dateFormat = "2006 January 02"
   mainSections = ["posts"]
-  description = "Posts about engineering, programming, software development including Elixir and Phoneix and personal interests"
+  description = "Posts about engineering, programming, software development including Elixir, Phoneix, Erlang, BEAM and personal interests"
 
 [params.author]
   name = "David J Sweeney"
