@@ -16,4 +16,4 @@ But times have changed and we have been inspired by great role models such as Bu
 
 This is about committing to an idea or objective and going all-in --  when you do that, sometimes, *great* things happen!
 
-So the next time you're printing that first message to the console in a new language or committing the first code to a new repository I suggest you depense with the traditional "hello, world" or "initial commit" in favour of "To infinity and beyond..." -- with a start like that the sky is the limit!
+So the next time you're printing that first message to the console in a new language or committing the first code to a new repository I suggest you dispense with the traditional "hello, world" or "initial commit" in favour of "To infinity and beyond..." -- with a start like that the sky is the limit!
