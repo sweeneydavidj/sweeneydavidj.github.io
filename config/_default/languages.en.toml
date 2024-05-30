@@ -16,6 +16,7 @@ title = "BEAMjourney"
   headline = "Engineer, Programmer, Problem solver"
   # bio = "A little bit about you"
   links = [
+    { elixir-forum = "https://elixirforum.com/u/sweeneydavidj/summary" },
     { email = "mailto:sweeneydavidj@gmail.com" },
     { link = "https://beamjourney.com/" },
     { github = "https://github.com/sweeneydavidj" },

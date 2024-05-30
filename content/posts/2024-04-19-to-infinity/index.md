@@ -10,7 +10,7 @@ tags = ['buzz']
 
 ## Let us begin
 [hello, world](https://en.wikipedia.org/wiki/%22Hello,_World!%22_program)
-has served us programmers well for many years, I have started manys the project or code repository with these exact words.
+has served us programmers well for many years, I have started lots of projects and code repositories with these exact words.
 
 But times have changed and we have been inspired by great role models such as Buzz Lightyear urging us to reach for the stars with his iconic phrase "To infinity and beyond..."
 
