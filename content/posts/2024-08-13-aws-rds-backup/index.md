@@ -1,6 +1,6 @@
 +++
 title = "AWS RDS Cross Region and Account Backup"
-author = ["david"]
+author = ["David"]
 date = 2024-08-13
 tags = ["AWS"]
 url = "aws-rds-backup"
@@ -26,7 +26,7 @@ There is an official AWS [blog post](https://aws.amazon.com/blogs/storage/protec
 
 Create a new AWS Account that will be used for backup purposes.
 
-Remember to setup an IAM User and MFA for both the IAM User and the Root User.
+Remember to set up an IAM User and MFA for both the IAM User and the Root User.
 
 
 ### Create a Customer Managed Key (Shared Key) {#create-a-customer-managed-key--shared-key}
@@ -173,7 +173,7 @@ Note:
 -   The second `rds:` indicates a system snapshot.
 -   A catalog of the EventIDs can be found here [AWS RDS Events](https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/USER_Events.Messages.html#USER_Events.Messages.snapshot).
 
-Next setup the Rule Target to propagate the event to Region-B:
+Next set up the Rule Target to propagate the event to Region-B:
 
 -   Set the `Target Type` to `EventBridge event bus`.
 -   Then `Event bus in different account or Region`.
@@ -338,7 +338,7 @@ The rule pattern looks as follows:
 }
 ```
 
-Next setup the Rule target to propagate the event to Account-B:
+Next set up the Rule target to propagate the event to Account-B:
 
 -   Set the `Target Type` to `EventBridge event bus`.
 -   Then `Event bus in different account or Region`.
