@@ -1,0 +1,96 @@
+#+title: Installing Emacs 30
+#+date: 2024-12-27
+#+hugo_base_dir: ../../
+#+hugo_section: /posts/2024-12-27-emacs-30-ubuntu-24.04
+#+hugo_url: emacs-30-ubuntu-24.04
+#+hugo_tags: Emacs
+#+hugo_custom_front_matter: :summary Installing Emacs 30 from source on Ubuntu 24.04
+
+* Installing Emacs 30 on Ubuntu 24.04
+
+At the time of writing Emacs 30 is not yet released, but it might be worth upgrading to this version since it has some nice new features. Some highlights are given here; [[https://www.emacswiki.org/emacs/EmacsThirtyHighlights][Emacs wiki Emacs 30 highlights]], especially useful is that it comes with =elixir-ts-mode= and =heex-ts-mode=, you just need to add the necessary language grammers.
+
+** Install Emacs build deps
+In =Software & Updates= in the first tab =Ubuntu Software= ensure =Source code= is selected.
+
+#+begin_src bash
+  sudo apt update
+  sudo apt build-dep -y emacs
+#+end_src
+
+** Install Tree-sitter
+#+begin_src bash
+  cd /opt/
+  sudo mkdir tree-sitter
+  sudo chown $USER:$USER tree-sitter/
+  git clone https://github.com/tree-sitter/tree-sitter
+  cd tree-sitter/
+  make all
+  sudo make install
+
+  sudo ldconfig
+#+end_src
+
+** Install Emacs
+#+begin_src bash
+
+  cd /opt/
+  sudo mkdir emacs
+  sudo chown $USER:$USER emacs/
+  git clone git@github.com:emacs-mirror/emacs.git --single-branch --branch emacs-30
+  cd emacs/
+
+  ./autogen.sh
+  ./configure --with-tree-sitter --with-pgtk
+
+  # find out the number of processors to use in the next command
+  nproc
+
+  make bootstrap -j4
+
+  # quick test before install
+  src/emacs -Q
+
+  sudo make install
+#+end_src
+
+Note the option =--with-pgtk= builds emacs for "Pure GTK" which is needed for Wayland, now the default on Ubuntu (instead of the X Window System).
+
+** Set up Emacs init
+The most interesting part in the =init.el= file is as follows, this assumes you have an Elixir LSP server running at =/opt/elixir-ls/release/=
+#+begin_src elisp
+
+  (require 'treesit)
+  (require 'heex-ts-mode)
+  (require 'elixir-ts-mode)
+
+  ;; elixir-mode, elixir-ts-mode, heex-ts-mode
+  ;; are set up in the eglot-server-programs variable to look for
+  ;; language_server.sh
+  ;; so just add that to the path in ~/.profile using...
+  ;; PATH="/opt/elixir-ls/release:$PATH"
+  (require 'eglot)
+  (add-hook 'elixir-ts-mode-hook 'eglot-ensure)
+
+  (require 'yaml-ts-mode)
+
+#+end_src
+
+** Install language grammars for Tree-sitter
+To add the language grammars interactively use:
+#+begin_src bash
+  M-x treesit-install-language-grammar
+#+end_src
+
+Then add the language name, URL and accept all defaults.
+
+For example I immediately set up:
+
+| language | URL                                                      |
+|----------+----------------------------------------------------------|
+| elixir   | https://github.com/elixir-lang/tree-sitter-elixir.git    |
+| heex     | https://github.com/phoenixframework/tree-sitter-heex.git |
+| yaml     | https://github.com/tree-sitter-grammars/tree-sitter-yaml |
+
+
+And Enjoy!
