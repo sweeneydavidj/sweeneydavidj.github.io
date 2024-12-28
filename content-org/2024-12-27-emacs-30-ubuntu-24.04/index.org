@@ -2,7 +2,7 @@
 #+date: 2024-12-27
 #+hugo_base_dir: ../../
 #+hugo_section: /posts/2024-12-27-emacs-30-ubuntu-24.04
-#+hugo_url: emacs-30-ubuntu-24.04
+#+hugo_url: emacs-30-ubuntu-24-04
 #+hugo_tags: Emacs
 #+hugo_custom_front_matter: :summary Installing Emacs 30 from source on Ubuntu 24.04
 

@@ -3,7 +3,7 @@ title = "Installing Emacs 30"
 author = ["David"]
 date = 2024-12-27
 tags = ["Emacs"]
-url = "emacs-30-ubuntu-24.04"
+url = "emacs-30-ubuntu-24-04"
 draft = false
 summary = "Installing Emacs 30 from source on Ubuntu 24.04"
 +++
