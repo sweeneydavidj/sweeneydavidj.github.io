@@ -1,12 +1,12 @@
 #+title: Installing Emacs 30
 #+date: 2024-12-27
 #+hugo_base_dir: ../../
-#+hugo_section: /posts/2024-12-27-emacs-30-ubuntu-24.04
+#+hugo_section: /posts/2024-12-27-emacs-30-ubuntu-24-04
 #+hugo_url: emacs-30-ubuntu-24-04
 #+hugo_tags: Emacs
 #+hugo_custom_front_matter: :summary Installing Emacs 30 from source on Ubuntu 24.04
 
-* Installing Emacs 30 on Ubuntu 24.04
+* Installing Emacs 30 from source on Ubuntu 24.04
 
 At the time of writing Emacs 30 is not yet released, but it might be worth upgrading to this version since it has some nice new features. Some highlights are given here; [[https://www.emacswiki.org/emacs/EmacsThirtyHighlights][Emacs wiki Emacs 30 highlights]], especially useful is that it comes with =elixir-ts-mode= and =heex-ts-mode=, you just need to add the necessary language grammers.
 

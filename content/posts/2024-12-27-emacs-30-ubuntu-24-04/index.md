@@ -8,7 +8,7 @@ draft = false
 summary = "Installing Emacs 30 from source on Ubuntu 24.04"
 +++
 
-## Installing Emacs 30 on Ubuntu 24.04 {#installing-emacs-30-on-ubuntu-24-dot-04}
+## Installing Emacs 30 from source on Ubuntu 24.04 {#installing-emacs-30-from-source-on-ubuntu-24-dot-04}
 
 At the time of writing Emacs 30 is not yet released, but it might be worth upgrading to this version since it has some nice new features. Some highlights are given here; [Emacs wiki Emacs 30 highlights](https://www.emacswiki.org/emacs/EmacsThirtyHighlights), especially useful is that it comes with `elixir-ts-mode` and `heex-ts-mode`, you just need to add the necessary language grammers.
 
