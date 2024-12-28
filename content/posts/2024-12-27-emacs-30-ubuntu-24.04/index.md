@@ -76,7 +76,7 @@ The most interesting part in the `init.el` file is as follows, this assumes you 
 (require 'elixir-ts-mode)
 
 ;; elixir-mode, elixir-ts-mode, heex-ts-mode
-;; are setup in the eglot-server-programs variable to look for
+;; are set up in the eglot-server-programs variable to look for
 ;; language_server.sh
 ;; so just add that to the path in ~/.profile using...
 ;; PATH="/opt/elixir-ls/release:$PATH"
